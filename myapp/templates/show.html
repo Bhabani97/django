@@ -1,0 +1,62 @@
+<table class="table">
+
+    <form method="POST" action="/search">
+        {% csrf_token %}
+        <tr><td><input name="name"></td>
+            <button type="submit">Search</button></tr>
+    </form>
+    <tr>
+        <th>STUDENTID</th>
+        <th>NAME</th>
+        <th>DEPT_NAME</th>
+        <th>COMPANY PLACED</th>
+        <th>YEAR_GRADUATED</th>
+    </tr>
+    {% for i in student %}
+    <tr>
+        <td>{{ i.student_id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.d_name }}</td>
+        <td>{{ i.company_placed }}</td>
+        <td>{{ i.year_graduated }}</td>
+        <td>
+            <a href="edit/{{ i.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="delete/{{ i.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>

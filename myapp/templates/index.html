@@ -1,0 +1,16 @@
+<form method="POST" action="add">
+    {% csrf_token %}
+    <label>STUDENTID:</label>
+    <div>{{ form.student_id }}</div>
+    <label>NAME:</label>
+    <div>{{ form.name }}</div>
+    <label>DEPT_NAME:</label>
+    <div>{{ form.d_name }}</div>
+    <label>COMPANY PLACED:</label>
+    <div>{{ form.company_placed }}</div>
+    <label>YEAR_GRADUATED:</label>
+    <div>{{ form.year_graduated }}</div>
+    <div>
+        <button typeof="submit">SUBMIT</button>
+    </div>
+</form>
